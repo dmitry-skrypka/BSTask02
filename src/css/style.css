@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+    background: #f7f7f7;
+}
+
+.easySelectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.main-container {
+
+    margin: 100px 0;
+    /*overflow: hidden;*/
+    background-color: #f7f7f7;
+    color: #3b3b3b;
+}
+
+aside {
+    float: left;
+    width: 25%;
+    height: auto;
+    background-color: #f7f7f7;
+    margin-left: 20px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+}
+
+.title {
+    text-align: center;
+    /*border-bottom: #e2e1e0 solid;*/
+    color: #fffefe;
+    font-family: Roboto, sans-serif;
+    line-height: 1.8em;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #f65757;
+}
+
+main {
+    float: left;
+    width: 70%;
+    background-color: #f7f7f7;
+    margin-left: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+main:hover {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.userpic-container {
+    text-align: center;
+    background-color: #f7f7f7;
+    /*height: 266px;*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f65757;
+
+}
+
+.name {
+    font-size: 20px;
+    line-height: 1.2em;
+    padding-top: 8px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.prof {
+    font-size: 15px;
+    line-height: 1.8em;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.location {
+    font-size: 15px;
+    line-height: 1.8em;
+    /*padding-right: 20px;*/
+    /*padding-left: 20px;*/
+}
+
+.info-container {
+    padding-top: 20px;
+    border-bottom: 1px solid #f65757;
+}
+
+.hello {
+    font-size: 15px;
+    line-height: 1.8em;
+    padding-bottom: 20px;
+}
+
+.info {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.social-icons ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.userpic {
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.social-container {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.social-icons ul li {
+    padding: 0 8px 0 0;
+    line-height: 52px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.day {
+    display: grid;
+!important;
+    /*grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px   ;*/
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+!important;
+    /*grid-template-rows: 25% 100px auto ;*/
+}
+
+.day .hour.es-selected {
+    background: #dd7e7e;
+    color: #fff;
+}
+
+.day_square {
+    height: 100px;
+    width: 100px;
+    background-color: #2a6496;
+}
+
+.hour {
+    margin: 0 10px 10px 0;
+    background: #fff;
+    transition: background 0.2s;
+    width: auto;
+    height: 50px;
+    color: #3b3b3b;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 1px #ccc;
+}
+
+.hour:hover {
+
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media screen and (max-width: 950px) {
+    aside {
+        width: 100%;
+        margin-bottom: 40px;
+        margin-left: 0;
+    }
+
+    main {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.accordion {
+    /*width: 70%;*/
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.accordion .item {
+    margin-bottom: 8px;
+    border-bottom: solid thin #f9ababa8;
+}
+
+.accordion .item:last-child {
+    border-bottom: none;
+}
+
+.accordion .item .heading {
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #3b3b3b;
+    cursor: pointer;
+    padding: 25px 10px 28px;
+    text-transform: uppercase;
+}
+
+.faqs-box .accordion .item .heading {
+    display: inline-block
+}
+
+.accordion .item.open .heading,
+.accordion .item:last-child .heading {
+    border: 0
+}
+
+.accordion .item .heading {
+    position: relative;
+}
+
+.accordion .item .heading:after {
+    content: '\f055';
+    font-family: 'FontAwesome';
+    font-size: 18px;
+    color: #f65757;
+    position: absolute;
+    width: 17px;
+    height: 21px;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto
+}
+
+.accordion .item.open .heading:after {
+    content: '\f056';
+    color: #4b4b4b
+}
+
+.accordion .item .card {
+    display: none;
+    background: #f7f7f7;
+    font-size: 18px;
+    color: #3b3b3b;
+    padding: 0 10px
+}
+
+.accordion .item .card p {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    color: #3b3b3b;
+    margin: 0 0 21px
+}
